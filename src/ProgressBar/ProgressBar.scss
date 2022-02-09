@@ -1,5 +1,5 @@
 @import "variables";
-@import "node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/progress";
 
 .progress { 
     border: $progress-bar-border-width solid $progress-bar-border-color;
