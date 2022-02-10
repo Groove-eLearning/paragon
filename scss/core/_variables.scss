@@ -459,7 +459,7 @@ $grid-breakpoints: (
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
 
 
 // Grid containers
