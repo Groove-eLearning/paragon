@@ -1,5 +1,5 @@
 @import "variables";
-@import "~bootstrap/scss/button-group";
+@import "../../node_modules/bootstrapv4.6/scss/button-group";
 
 @mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%), $color: color-yiq($background), $hover-color: color-yiq($hover-background), $active-color: color-yiq($active-background)) {
   color: $color;
