@@ -140,11 +140,11 @@
       border-radius: calc(#{$btn-border-radius} + #{$distance});
     }
 
-    &.btn-lg::before {
+    &.paragon-btn-lg::before {
       border-radius: calc(#{$btn-border-radius-lg} + #{$distance});
     }
 
-    &.btn-sm::before {
+    &.paragon-btn-sm::before {
       border-radius: calc(#{$btn-border-radius-sm} + #{$distance});
     }
 
@@ -176,7 +176,7 @@
 // Base styles
 //
 
-.btn {
+.paragon-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -205,8 +205,8 @@
 }
 
 // Future-proof disabling of clicks on `<a>` elements
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.paragon-btn.disabled,
+fieldset:disabled a.paragon-btn {
   pointer-events: none;
 }
 
@@ -216,7 +216,7 @@ fieldset:disabled a.btn {
 //
 
 @each $color, $value in $theme-colors {
-  .btn-#{$color} {
+  .paragon-btn-#{$color} {
     $background: $value;
     $border: $value;
 
@@ -242,7 +242,7 @@ fieldset:disabled a.btn {
     @include button-focus(theme-color($color, "focus"));
   }
 
-  .btn-outline-#{$color} {
+  .paragon-btn-outline-#{$color} {
     $text-and-border: $value;
 
     $color-hover: theme-color($color, "hover");
@@ -263,7 +263,7 @@ fieldset:disabled a.btn {
     @include button-focus(theme-color($color, "focus"));
   }
 
-  .btn-inverse-#{$color} {
+  .paragon-btn-inverse-#{$color} {
     $text: $value;
 
     $active-background: theme-color($color, "background");
@@ -283,7 +283,7 @@ fieldset:disabled a.btn {
     @include button-focus($white);
   }
 
-  .btn-inverse-outline-#{$color} {
+  .paragon-btn-inverse-outline-#{$color} {
     $text-and-border: $white;
 
     $color-hover: theme-color($color, "hover");
@@ -309,7 +309,7 @@ fieldset:disabled a.btn {
 // Tertiary buttons
 //
 
-.btn-tertiary {
+.paragon-btn-tertiary {
   $background: $btn-tertiary-bg;
   $border: transparent;
   $hover-background: $btn-tertiary-hover-bg;
@@ -331,7 +331,7 @@ fieldset:disabled a.btn {
   @include button-focus(theme-color("primary", "focus"));
 }
 
-.btn-inverse-tertiary {
+.paragon-btn-inverse-tertiary {
   $background: $btn-inverse-tertiary-bg;
   $border: transparent;
   $hover-background: $btn-inverse-tertiary-hover-bg;
@@ -358,7 +358,7 @@ fieldset:disabled a.btn {
 //
 
 // Make a button look and behave like a link
-.btn-link {
+.paragon-btn-link {
   font-weight: $font-weight-normal;
   color: $link-color;
   text-decoration: $link-decoration;
@@ -383,8 +383,8 @@ fieldset:disabled a.btn {
   // No need for an active state here
 }
 
-.btn-light,
-.btn-dark {
+.paragon-btn-light,
+.paragon-btn-dark {
   @include button-focus(theme-color("primary", "focus"));
 }
 
@@ -393,11 +393,11 @@ fieldset:disabled a.btn {
 // Button Sizes
 //
 
-.btn-lg {
+.paragon-btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
 
-.btn-sm {
+.paragon-btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
 
@@ -406,17 +406,17 @@ fieldset:disabled a.btn {
 // Block button
 //
 
-.btn-block {
+.paragon-btn-block {
   display: flex;
   width: 100%;
 
   // Vertically space out multiple block buttons
-  + .btn-block {
+  + .paragon-btn-block {
     margin-top: $btn-block-spacing-y;
   }
 }
 
-.btn-inline {
+.paragon-btn-inline {
   line-height: calc(#{$line-height-base}em - #{2 * $btn-border-width});
   font-size: inherit;
   vertical-align: bottom;
@@ -427,7 +427,7 @@ fieldset:disabled a.btn {
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  &.btn-block {
+  &.paragon-btn-block {
     width: 100%;
   }
 }
@@ -436,13 +436,13 @@ input[type="button"] {
 // Button Icon Sizes
 //
 
-.btn {
-  .btn-icon-before {
+.paragon-btn {
+  .paragon-btn-icon-before {
     margin-inline-end: 0.5rem;
     margin-left: -0.25em;
   }
 
-  .btn-icon-after {
+  .paragon-btn-icon-after {
     margin-inline-start: 0.5rem;
     margin-right: -0.25em;
   }
